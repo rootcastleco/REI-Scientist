@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: REI Scientist
+message: >-
+  If you use REI Scientist in research, cite the version of the software
+  and describe the experimental protocol and any AI assistance.
+type: software
+authors:
+  - name: Rootcastle Engineering & Innovation
+version: 0.1.0
+date-released: 2026-11-08
+url: https://github.com/rootcastleco/REI-Scientist
+repository-code: https://github.com/rootcastleco/REI-Scientist
+abstract: >-
+  Evidence-first, offline-first scientific experimentation framework
+  with bounded algorithm search and independently replayed numerical evidence.
+license: MIT

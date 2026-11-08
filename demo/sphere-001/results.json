@@ -1,0 +1,767 @@
+{
+  "baseline": {
+    "depth": 0,
+    "key": "a645f856077e",
+    "method": "random_search",
+    "params": {},
+    "parent": null
+  },
+  "development_leaderboard": [
+    {
+      "depth": 0,
+      "dev_mean": 0.3608298830660388,
+      "is_baseline": true,
+      "key": "a645f856077e",
+      "method": "random_search",
+      "params": {},
+      "parent": null
+    },
+    {
+      "depth": 0,
+      "dev_mean": 0.05498895309428371,
+      "is_baseline": false,
+      "key": "096c212c3284",
+      "method": "hill_climb",
+      "params": {
+        "step_fraction": 0.12
+      },
+      "parent": null
+    },
+    {
+      "depth": 0,
+      "dev_mean": 0.03432845993238444,
+      "is_baseline": false,
+      "key": "d4f2cba8318f",
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.12,
+        "temperature": 2.0
+      },
+      "parent": null
+    },
+    {
+      "depth": 1,
+      "dev_mean": 0.017740498910576094,
+      "is_baseline": false,
+      "key": "a5c721bf41ea",
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 2.0
+      },
+      "parent": "d4f2cba8318f"
+    },
+    {
+      "depth": 2,
+      "dev_mean": 0.006690837589932276,
+      "is_baseline": false,
+      "key": "3b5a5fb37b60",
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.03,
+        "temperature": 2.0
+      },
+      "parent": "a5c721bf41ea"
+    },
+    {
+      "depth": 2,
+      "dev_mean": 0.03678617490177702,
+      "is_baseline": false,
+      "key": "06a04ec960c9",
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.09,
+        "temperature": 2.0
+      },
+      "parent": "a5c721bf41ea"
+    },
+    {
+      "depth": 2,
+      "dev_mean": 0.008444486983618871,
+      "is_baseline": false,
+      "key": "9b6f524982dd",
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 1.0
+      },
+      "parent": "a5c721bf41ea"
+    },
+    {
+      "depth": 2,
+      "dev_mean": 0.005061380680159618,
+      "is_baseline": false,
+      "key": "f76646ac22b7",
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 4.0
+      },
+      "parent": "a5c721bf41ea"
+    },
+    {
+      "depth": 2,
+      "dev_mean": 0.008804569072119177,
+      "is_baseline": false,
+      "key": "49ff3f3c4c68",
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.9409,
+        "step_fraction": 0.06,
+        "temperature": 2.0
+      },
+      "parent": "a5c721bf41ea"
+    }
+  ],
+  "development_runs": {
+    "06a04ec960c9": [
+      {
+        "best_position": [
+          0.1793659939191109,
+          0.18851496347488222
+        ],
+        "best_value": 0.06771005122852672,
+        "elapsed_ms": 0.2705,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.09,
+          "temperature": 2.0
+        },
+        "seed": 11,
+        "trace_sha256": "e9db32bec081c4392859a76d79842733b435b5625f6d7fd275e1d4c19c5cfa74"
+      },
+      {
+        "best_position": [
+          -0.03840135307100878,
+          -0.044300780687495156
+        ],
+        "best_value": 0.0034372230872058195,
+        "elapsed_ms": 0.2665,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.09,
+          "temperature": 2.0
+        },
+        "seed": 23,
+        "trace_sha256": "41b8587a04afab6dccda8dfe797e07c9fe30d9f0d63a642fa323962d9e2c4498"
+      },
+      {
+        "best_position": [
+          -0.19422548089555122,
+          -0.03857088228820277
+        ],
+        "best_value": 0.03921125038959852,
+        "elapsed_ms": 0.2811,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.09,
+          "temperature": 2.0
+        },
+        "seed": 37,
+        "trace_sha256": "fe74e2edfc1083aba347aeee91e9d1ecd195393c5cbfb8b9705d81d698dd0f7f"
+      }
+    ],
+    "096c212c3284": [
+      {
+        "best_position": [
+          -0.0797629204520354,
+          0.10395544805235885
+        ],
+        "best_value": 0.017168858658804406,
+        "elapsed_ms": 0.446,
+        "evaluations": 120,
+        "method": "hill_climb",
+        "params": {
+          "step_fraction": 0.12
+        },
+        "seed": 11,
+        "trace_sha256": "28aef8af8feac3129c638c803a5e2a974206fce6576af83745b43ce9c3d16f4a"
+      },
+      {
+        "best_position": [
+          -0.06053709580416289,
+          0.1691361285524105
+        ],
+        "best_value": 0.03227176995009993,
+        "elapsed_ms": 0.2856,
+        "evaluations": 120,
+        "method": "hill_climb",
+        "params": {
+          "step_fraction": 0.12
+        },
+        "seed": 23,
+        "trace_sha256": "52a385abbbced0c5355b2016d92af0e208c55b2d431d517066e9a53788357e30"
+      },
+      {
+        "best_position": [
+          -0.309576194724459,
+          0.14031682127909906
+        ],
+        "best_value": 0.1155262306739468,
+        "elapsed_ms": 0.245,
+        "evaluations": 120,
+        "method": "hill_climb",
+        "params": {
+          "step_fraction": 0.12
+        },
+        "seed": 37,
+        "trace_sha256": "91275c9c8b82aa09e3ad82505d1675a1a4af94f305397e616dbb3005fe9d278b"
+      }
+    ],
+    "3b5a5fb37b60": [
+      {
+        "best_position": [
+          0.04400670614793775,
+          0.04241933273208354
+        ],
+        "best_value": 0.003735989975426156,
+        "elapsed_ms": 0.3498,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.03,
+          "temperature": 2.0
+        },
+        "seed": 11,
+        "trace_sha256": "32d0578f4745cc82e5bf3397c875bdfd6fafb0cc1127c695496c36e933036203"
+      },
+      {
+        "best_position": [
+          -0.09229338223651773,
+          0.07571435569492416
+        ],
+        "best_value": 0.01425073206295346,
+        "elapsed_ms": 0.4902,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.03,
+          "temperature": 2.0
+        },
+        "seed": 23,
+        "trace_sha256": "0ec52ce3e63bd68244125db3f4eedf84fd6f22b569d10b1edeac2490bd198e5c"
+      },
+      {
+        "best_position": [
+          -0.030988911545051276,
+          0.03354814589020083
+        ],
+        "best_value": 0.002085790731417211,
+        "elapsed_ms": 0.2964,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.03,
+          "temperature": 2.0
+        },
+        "seed": 37,
+        "trace_sha256": "573f407d480f966313f3918c0891df37f5586ba9fbf707a9656783340aacece1"
+      }
+    ],
+    "49ff3f3c4c68": [
+      {
+        "best_position": [
+          -0.05137232370583695,
+          0.04211837605850394
+        ],
+        "best_value": 0.0044130732447428545,
+        "elapsed_ms": 1.9842,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.9409,
+          "step_fraction": 0.06,
+          "temperature": 2.0
+        },
+        "seed": 11,
+        "trace_sha256": "d264a3a805edbeaac78c2f28d09b344d8743a4b10ff3c0f7dbd5cc65d0255880"
+      },
+      {
+        "best_position": [
+          0.020635017854650994,
+          -0.08151706949515705
+        ],
+        "best_value": 0.00707083658094003,
+        "elapsed_ms": 0.2687,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.9409,
+          "step_fraction": 0.06,
+          "temperature": 2.0
+        },
+        "seed": 23,
+        "trace_sha256": "0dc3527d60d3d5300eb4504a2f2c709b32ad35577d29fcb79b834240c2853d1d"
+      },
+      {
+        "best_position": [
+          0.013962660274529276,
+          -0.12138715545201942
+        ],
+        "best_value": 0.014929797390674645,
+        "elapsed_ms": 0.2596,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.9409,
+          "step_fraction": 0.06,
+          "temperature": 2.0
+        },
+        "seed": 37,
+        "trace_sha256": "12fff2c5af0d6fc1a915596b2245266a07dd9744fbb2a1b2c794b6c5ff9fa7d9"
+      }
+    ],
+    "9b6f524982dd": [
+      {
+        "best_position": [
+          0.008360966999988784,
+          -0.07884274051923493
+        ],
+        "best_value": 0.00628608350175831,
+        "elapsed_ms": 0.2634,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 1.0
+        },
+        "seed": 11,
+        "trace_sha256": "67fcaf884aebf226e96bd055bc8c46beedcfa3a1617eea9a76689124c0c28df8"
+      },
+      {
+        "best_position": [
+          0.023543998468850955,
+          -0.10601404892150548
+        ],
+        "best_value": 0.011793298432632613,
+        "elapsed_ms": 0.2593,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 1.0
+        },
+        "seed": 23,
+        "trace_sha256": "c5d6688e31e87a0a23f0b9050a19b6a647ba90260b4f38ec91e632b3a591cbff"
+      },
+      {
+        "best_position": [
+          -0.001488649990454588,
+          -0.08515787067365888
+        ],
+        "best_value": 0.007254079016465691,
+        "elapsed_ms": 0.3663,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 1.0
+        },
+        "seed": 37,
+        "trace_sha256": "b0734c21e574f2c22777be13b9bae85695c974da70156767b5c336c03e708cc8"
+      }
+    ],
+    "a5c721bf41ea": [
+      {
+        "best_position": [
+          0.039811549875852115,
+          -0.05563460189109398
+        ],
+        "best_value": 0.004680168431097979,
+        "elapsed_ms": 0.4793,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 2.0
+        },
+        "seed": 11,
+        "trace_sha256": "cd5956aec9c1583ada21bd9860ed62046f7784fefd996cf813feabcdd910f57b"
+      },
+      {
+        "best_position": [
+          -0.07882998144571718,
+          0.09467753067707751
+        ],
+        "best_value": 0.015178000789841068,
+        "elapsed_ms": 0.3277,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 2.0
+        },
+        "seed": 23,
+        "trace_sha256": "b013efc749648258a509916bdc4290a2326056b239536545e24b30ee6e1b6367"
+      },
+      {
+        "best_position": [
+          -0.15396248967460893,
+          0.09827959749604784
+        ],
+        "best_value": 0.033363327510789235,
+        "elapsed_ms": 0.2654,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 2.0
+        },
+        "seed": 37,
+        "trace_sha256": "3644bdc1fd7d1b574200e4faef19edec1b5471fab6efeaa75f2cd9b5e63a05dc"
+      }
+    ],
+    "a645f856077e": [
+      {
+        "best_position": [
+          -0.476204464901814,
+          0.59772386080496
+        ],
+        "best_value": 0.5840445061680102,
+        "elapsed_ms": 0.2054,
+        "evaluations": 120,
+        "method": "random_search",
+        "params": {},
+        "seed": 11,
+        "trace_sha256": "5de7172553f5679d93d3f36df2599a0cdd4c664e24060fdc94dd9d11b84a3a2d"
+      },
+      {
+        "best_position": [
+          -0.2224120679558439,
+          0.5375233205700125
+        ],
+        "best_value": 0.3383984481290074,
+        "elapsed_ms": 0.1702,
+        "evaluations": 120,
+        "method": "random_search",
+        "params": {},
+        "seed": 23,
+        "trace_sha256": "5015833598ab09a8010b184948aa0c50ccf74ed51a396eda47e1fcb1373f00ec"
+      },
+      {
+        "best_position": [
+          0.30428434077921285,
+          -0.25972626909432694
+        ],
+        "best_value": 0.16004669490109885,
+        "elapsed_ms": 0.1704,
+        "evaluations": 120,
+        "method": "random_search",
+        "params": {},
+        "seed": 37,
+        "trace_sha256": "de050279260fc4dc9bdd930c9ec54bb7fe39eed11f89145dfb7818ff83fbd309"
+      }
+    ],
+    "d4f2cba8318f": [
+      {
+        "best_position": [
+          -0.12457028194103265,
+          -0.01998533354992832
+        ],
+        "best_value": 0.015917168699970254,
+        "elapsed_ms": 0.2756,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.12,
+          "temperature": 2.0
+        },
+        "seed": 11,
+        "trace_sha256": "82ccd380665a6a42bec2eb01af263611fbcbd77f499f881334502f791ae8ed9e"
+      },
+      {
+        "best_position": [
+          0.06333601538513073,
+          0.13930280123143168
+        ],
+        "best_value": 0.023416721275789282,
+        "elapsed_ms": 0.2886,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.12,
+          "temperature": 2.0
+        },
+        "seed": 23,
+        "trace_sha256": "c0a3c6984e251afe2b5b3b8cd24af4fe1812bae0fd8adf2271b379d89ac49e12"
+      },
+      {
+        "best_position": [
+          0.18208523563192686,
+          0.17463234747966788
+        ],
+        "best_value": 0.06365148982139379,
+        "elapsed_ms": 0.338,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.12,
+          "temperature": 2.0
+        },
+        "seed": 37,
+        "trace_sha256": "125fd757f1378697462d362d747343cef7f797446c34aaeedd4bab1756ecf751"
+      }
+    ],
+    "f76646ac22b7": [
+      {
+        "best_position": [
+          -0.023063219173351246,
+          -0.009431795479295957
+        ],
+        "best_value": 0.0006208708446013042,
+        "elapsed_ms": 0.2973,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 4.0
+        },
+        "seed": 11,
+        "trace_sha256": "bb839956023cde430ecf98e6bff41e08db4ed0c957c1686a419c021ec460aaae"
+      },
+      {
+        "best_position": [
+          -0.03660728653836309,
+          0.019324154562785467
+        ],
+        "best_value": 0.0017135163772682423,
+        "elapsed_ms": 0.2628,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 4.0
+        },
+        "seed": 23,
+        "trace_sha256": "69cac60d833b066a20b7b1c0de867fe15f2594b57c31bbc3fa634c816aa96e59"
+      },
+      {
+        "best_position": [
+          -0.10518076154345798,
+          0.04227011024054156
+        ],
+        "best_value": 0.012849754818609307,
+        "elapsed_ms": 0.3588,
+        "evaluations": 120,
+        "method": "simulated_annealing",
+        "params": {
+          "cooling": 0.97,
+          "step_fraction": 0.06,
+          "temperature": 4.0
+        },
+        "seed": 37,
+        "trace_sha256": "c8e0b29435e0bc7103ba747e81fa5b24e010a23e84dd0c86905702df9b87a702"
+      }
+    ]
+  },
+  "holdout_baseline": [
+    {
+      "best_position": [
+        0.5233708465935125,
+        0.35347322489042554
+      ],
+      "best_value": 0.39886036377844736,
+      "elapsed_ms": 0.2188,
+      "evaluations": 120,
+      "method": "random_search",
+      "params": {},
+      "seed": 101,
+      "trace_sha256": "b8cc66951fedd7f611b7e7929ad9207a1a960cecd15903ca32d2bdf1f3210823"
+    },
+    {
+      "best_position": [
+        0.7953528893833282,
+        -0.23256009091616647
+      ],
+      "best_value": 0.6866704145373442,
+      "elapsed_ms": 0.1649,
+      "evaluations": 120,
+      "method": "random_search",
+      "params": {},
+      "seed": 103,
+      "trace_sha256": "29d8cac7955ef4262df0f1eb6c831fb4740fb9154f90d606b39784767f3a308a"
+    },
+    {
+      "best_position": [
+        -0.8365624612784659,
+        0.07200736867636337
+      ],
+      "best_value": 0.7050218127639786,
+      "elapsed_ms": 0.1649,
+      "evaluations": 120,
+      "method": "random_search",
+      "params": {},
+      "seed": 107,
+      "trace_sha256": "25bc38224737a5ed3d192950aa1d78fa1981d475f2a47dfbd35cc3edd1bcb39a"
+    },
+    {
+      "best_position": [
+        0.6268133905943252,
+        0.18872753367900952
+      ],
+      "best_value": 0.4285131085969157,
+      "elapsed_ms": 0.1636,
+      "evaluations": 120,
+      "method": "random_search",
+      "params": {},
+      "seed": 109,
+      "trace_sha256": "81a97a0378524d6c7e4a5e2a25049158e33a7f57398051616bee86bdfc3964dd"
+    },
+    {
+      "best_position": [
+        0.05858623322251866,
+        -0.013021719261901765
+      ],
+      "best_value": 0.0036019118957391323,
+      "elapsed_ms": 0.1645,
+      "evaluations": 120,
+      "method": "random_search",
+      "params": {},
+      "seed": 113,
+      "trace_sha256": "c8583a888038025748efca98064a7820f8308bb7452ff8279b9aa51262df083c"
+    }
+  ],
+  "holdout_selected": [
+    {
+      "best_position": [
+        -0.10874926834111422,
+        -0.10860782335363861
+      ],
+      "best_value": 0.023622062658342838,
+      "elapsed_ms": 2.3464,
+      "evaluations": 120,
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 4.0
+      },
+      "seed": 101,
+      "trace_sha256": "35eb74c09a3e25ca7b6ec70c39c1bcb8835d2deae2b2fe43cc4413b39a1cc31c"
+    },
+    {
+      "best_position": [
+        0.11402660975883394,
+        -0.024004144249685583
+      ],
+      "best_value": 0.013578266674253117,
+      "elapsed_ms": 0.265,
+      "evaluations": 120,
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 4.0
+      },
+      "seed": 103,
+      "trace_sha256": "0acadcb1c5aaf8083235f66ab55e0ce751ce30f51c628324fb32d234c702b727"
+    },
+    {
+      "best_position": [
+        -0.1674387161228904,
+        0.19217573422162126
+      ],
+      "best_value": 0.0649672364805011,
+      "elapsed_ms": 0.2642,
+      "evaluations": 120,
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 4.0
+      },
+      "seed": 107,
+      "trace_sha256": "c63d9fb8662873f72715133016cf0297c8a4598225a0c8d9d533b04a91a89547"
+    },
+    {
+      "best_position": [
+        -0.04424768835551259,
+        0.05548359925010715
+      ],
+      "best_value": 0.005036287710553056,
+      "elapsed_ms": 0.258,
+      "evaluations": 120,
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 4.0
+      },
+      "seed": 109,
+      "trace_sha256": "d8d9a374e6b455aa0479a56a13fe3841c3843ea3c0970221a47351f4384eab20"
+    },
+    {
+      "best_position": [
+        0.092233421512117,
+        -0.012747250360416407
+      ],
+      "best_value": 0.008669496435582983,
+      "elapsed_ms": 0.2764,
+      "evaluations": 120,
+      "method": "simulated_annealing",
+      "params": {
+        "cooling": 0.97,
+        "step_fraction": 0.06,
+        "temperature": 4.0
+      },
+      "seed": 113,
+      "trace_sha256": "a7cefb2bb8cc562a7e77df292955d4eb641706efbf5bca8426a27de5b038e539"
+    }
+  ],
+  "literature": [],
+  "schema_version": "1.0",
+  "selected": {
+    "depth": 2,
+    "key": "f76646ac22b7",
+    "method": "simulated_annealing",
+    "params": {
+      "cooling": 0.97,
+      "step_fraction": 0.06,
+      "temperature": 4.0
+    },
+    "parent": "a5c721bf41ea"
+  },
+  "study_id": "sphere-optimizer-pilot",
+  "verdict": {
+    "baseline_mean": 0.444533522314485,
+    "candidate_mean": 0.023174669991846617,
+    "ci95_delta": [
+      0.20662553907273282,
+      0.6099540538359
+    ],
+    "holdout_seeds": 5,
+    "mean_delta": 0.42135885232263837,
+    "paired_wins": 4,
+    "reasons": [
+      "Target met and paired-bootstrap lower bound > 0; exploratory result only"
+    ],
+    "relative_improvement_pct": 94.78674411972654,
+    "status": "PASS"
+  }
+}

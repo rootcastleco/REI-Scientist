@@ -1,0 +1,14 @@
+{"event":"study_validated","seq":1,"study_id":"rastrigin-global-search-pilot"}
+{"dev_mean":5.448089987569843,"event":"development_evaluated","method":"random_search","proposal_key":"a645f856077e","seq":2}
+{"dev_mean":2.458929588794632,"event":"development_evaluated","method":"hill_climb","proposal_key":"096c212c3284","seq":3}
+{"dev_mean":1.3474275927464976,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"d4f2cba8318f","seq":4}
+{"dev_mean":2.6160532125428673,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"a5c721bf41ea","seq":5}
+{"dev_mean":4.7355239125143775,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"a4dca19bdbeb","seq":6}
+{"dev_mean":1.5928858063329738,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"bde483c50266","seq":7}
+{"dev_mean":1.3042315471045143,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"2ab2dc49a312","seq":8}
+{"dev_mean":1.1595431620358514,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"8740b568204a","seq":9}
+{"dev_mean":1.4088101289289472,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"712fb02dc815","seq":10}
+{"dev_mean":1.938368513202389,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"508f0f53ce53","seq":11}
+{"dev_mean":1.5928858063329738,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"0e42e96ca641","seq":12}
+{"event":"candidate_selected","proposal_key":"8740b568204a","seq":13}
+{"event":"holdout_evaluated","seq":14,"verdict":"PASS"}

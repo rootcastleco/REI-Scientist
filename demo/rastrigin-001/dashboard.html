@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>REI Scientist | rastrigin-global-search-pilot</title>
+<style>
+:root { color-scheme: dark; --bg:#090d16; --card:#111825; --ink:#ecf3fb; --muted:#a4b4c9; --line:#28364c; --blue:#0E3D8A; --green:#228B55; --amber:#c38b44; }
+* { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,Segoe UI,Arial,sans-serif; line-height:1.5 }
+main { width:min(1120px, 94vw); margin:0 auto 5rem } .top { border-bottom:1px solid var(--line); background:#080b11 }
+.top-inner { width:min(1120px,94vw); margin:auto; padding:1.2rem 0; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem }
+.brand { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:1rem; font-weight:800; letter-spacing:0.12em; }
+.brand span { color:#5cc894 } .meta { color:var(--muted); font-family:ui-monospace,monospace; font-size:.78rem }
+h1 { font-size:clamp(1.65rem,4vw,2.7rem); letter-spacing:-.03em; margin:1.7rem 0 .6rem }
+h2 { font-size:1.1rem; margin:0 0 1rem } p { margin:.55rem 0 }
+.lead { color:var(--muted); max-width:830px; font-size:1.05rem }
+.status { display:inline-flex; border:1px solid var(--line); border-radius:3px; padding:.3rem .65rem; font-family:ui-monospace,monospace; font-size:.8rem; font-weight:800; letter-spacing:.05em }
+.status.pass { color:#70dba3; border-color:#27734a } .status.fail { color:#f19090; border-color:#a63b3b } .status.unknown { color:#e0ad66; border-color:#8b6030 }
+.section { margin-top:1.75rem } .metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.85rem; margin-top:1.6rem }
+.panel,.metric { padding:1.25rem; border:1px solid var(--line); background:var(--card); border-radius:7px }
+.metric small { display:block; color:var(--muted); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase }
+.metric strong { font-family:ui-monospace,monospace; font-size:clamp(1.1rem,2.4vw,1.65rem); display:block; margin-top:.35rem; word-break:break-word }
+.metric.primary { border-top:3px solid #2f72bb } .metric.good { border-top:3px solid var(--green) }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:.85rem }
+.kv { display:grid; grid-template-columns:180px minmax(0,1fr); gap:.5rem .8rem; font-size:.9rem }
+.kv dt { color:var(--muted) } .kv dd { margin:0; overflow-wrap:anywhere }
+table { width:100%; border-collapse:collapse; font-size:.89rem } th { text-align:left; color:var(--muted); font-weight:600; border-bottom:1px solid var(--line); padding:.7rem .4rem } td { border-bottom:1px solid #1f2b3d; padding:.8rem .4rem; vertical-align:middle }
+.num { font-family:ui-monospace,monospace; font-variant-numeric:tabular-nums; white-space:nowrap }
+.params { font-family:ui-monospace,monospace; font-size:.7rem; color:var(--muted); overflow-wrap:anywhere; padding-top:.15rem }
+.bar-track { background:#273348; height:8px; border-radius:2px; min-width:70px; overflow:hidden } .bar { display:block; height:100%; background:#55718d } .bar.selected { background:var(--green) } .bar.baseline { background:#b2814b }
+.dot { display:inline-block; width:7px; height:7px; margin-right:.5rem; background:#55718d; border-radius:2px } .dot.selected { background:var(--green) } .dot.baseline { background:#b2814b }
+code { color:#b6d5f4; font-size:.8rem } .note { border-left:3px solid var(--amber); padding:.8rem 1rem; background:#191912; color:#ded8c8; margin-top:1rem }
+footer { color:var(--muted); padding-top:2rem; border-top:1px solid var(--line); margin-top:3rem; font-size:.8rem }
+@media(max-width:790px) { .metrics { grid-template-columns:repeat(2,minmax(0,1fr)) } .grid { grid-template-columns:1fr } .kv { grid-template-columns:115px 1fr } .panel { overflow-x:auto } }
+@media(max-width:460px) { .metrics { grid-template-columns:1fr } }
+@media print { :root { color-scheme:light } body { background:white;color:black } .panel,.metric { background:white;color:black;border-color:#ccc } .lead,.meta,.kv dt,.params,footer { color:#555 } }
+</style>
+</head>
+<body>
+<header class="top"><div class="top-inner"><div class="brand">ROOTCASTLE <span>/ REI SCIENTIST</span></div><div class="meta">RESEARCH ENGINE v0.1.0 &nbsp; / &nbsp; OFFLINE AUDIT</div></div></header>
+<main>
+<h1>rastrigin-global-search-pilot</h1>
+<div class="status pass">PASS</div>
+<p class="lead">Does simulated annealing yield a lower objective than random search on a multimodal Rastrigin benchmark under an identical evaluation budget?</p>
+<div class="metrics">
+<div class="metric primary"><small>Baseline mean (holdout)</small><strong>4.83526</strong></div>
+<div class="metric good"><small>Selected mean (holdout)</small><strong>1.66236</strong></div>
+<div class="metric"><small>Relative improvement</small><strong>65.62%</strong></div>
+<div class="metric"><small>Function evaluations</small><strong>7,740</strong></div>
+</div>
+<div class="grid section">
+<section class="panel"><h2>Experiment protocol</h2><dl class="kv">
+<dt>Benchmark</dt><dd><code>rastrigin</code></dd>
+<dt>Dimension</dt><dd>2</dd>
+<dt>Bounds</dt><dd>(-5.12, 5.12)</dd>
+<dt>Per-run budget</dt><dd>180 evaluations</dd>
+<dt>Development seeds</dt><dd>[11, 23, 37]</dd>
+<dt>Holdout seeds</dt><dd>[101, 103, 107, 109, 113]</dd>
+<dt>Improvement target</dt><dd>5.00%</dd>
+<dt>Bootstrap mean-delta 95% CI</dt><dd>[0.22405, 6.355]</dd>
+</dl></section>
+<section class="panel"><h2>Predeclared hypothesis</h2><p>On independent holdout seeds, one registered local search method provides at least a 5 percent improvement over uniform random search without crossing the evaluation budget.</p><h2 style="margin-top:1.4rem">Selected configuration</h2><p><code>simulated_annealing {&#x27;cooling&#x27;: 0.97, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 8.0}</code></p><p class="meta">Development-only selection. One-time holdout. Paired wins: 3/5.</p></section>
+</div>
+<section class="panel section"><h2>Best-first experiment exploration</h2><p class="meta">Development objective; smaller is better. Bar length represents loss, not performance gain.</p><table><thead><tr><th>Algorithm</th><th>Relative loss</th><th>Mean</th><th>Node</th></tr></thead><tbody><tr><td><span class="dot selected"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.97, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 8.0}</div></td><td><div class="bar-track"><span class="bar selected" style="width:21.283%"></span></div></td><td class="num">1.15954</td><td><code>8740b568204a</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.97, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 4.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:23.939%"></span></div></td><td class="num">1.30423</td><td><code>2ab2dc49a312</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.97, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 2.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:24.732%"></span></div></td><td class="num">1.34743</td><td><code>d4f2cba8318f</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.9409, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 4.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:25.859%"></span></div></td><td class="num">1.40881</td><td><code>712fb02dc815</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.97, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 1.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:29.238%"></span></div></td><td class="num">1.59289</td><td><code>bde483c50266</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.9409, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 2.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:29.238%"></span></div></td><td class="num">1.59289</td><td><code>0e42e96ca641</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.9894, &#x27;step_fraction&#x27;: 0.12, &#x27;temperature&#x27;: 4.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:35.579%"></span></div></td><td class="num">1.93837</td><td><code>508f0f53ce53</code></td></tr><tr><td><span class="dot candidate"></span>hill_climb<div class="params">{&#x27;step_fraction&#x27;: 0.12}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:45.134%"></span></div></td><td class="num">2.45893</td><td><code>096c212c3284</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.97, &#x27;step_fraction&#x27;: 0.06, &#x27;temperature&#x27;: 2.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:48.018%"></span></div></td><td class="num">2.61605</td><td><code>a5c721bf41ea</code></td></tr><tr><td><span class="dot candidate"></span>simulated_annealing<div class="params">{&#x27;cooling&#x27;: 0.97, &#x27;step_fraction&#x27;: 0.18, &#x27;temperature&#x27;: 2.0}</div></td><td><div class="bar-track"><span class="bar candidate" style="width:86.921%"></span></div></td><td class="num">4.73552</td><td><code>a4dca19bdbeb</code></td></tr><tr><td><span class="dot baseline"></span>random_search<div class="params">{}</div></td><td><div class="bar-track"><span class="bar baseline" style="width:100.000%"></span></div></td><td class="num">5.44809</td><td><code>a645f856077e</code></td></tr></tbody></table></section>
+<section class="panel section"><h2>Verification and disclosure</h2><p>Target met and paired-bootstrap lower bound &gt; 0; exploratory result only</p><dl class="kv">
+<dt>Solution feasibility</dt><dd>Independently checked</dd>
+<dt>Objective values</dt><dd>Recomputed through separate formulas</dd>
+<dt>Replay</dt><dd>Use <code>rei-scientist verify RUN_DIR</code></dd>
+<dt>Input SHA-256</dt><dd><code>0ab4bf6e43757d08345c3dcd9f7a2b91ce88cc7cfc1f8976c41e5d3702ca5453</code></dd>
+<dt>Source SHA-256</dt><dd><code>5dcb1362e3174e3eba0bb6cab3c9d700d669c03efa6caf08fde8fcfc538d43da</code></dd>
+<dt>LLM proposals</dt><dd>NONE</dd>
+</dl><div class="note"><b>Evidence limitation:</b> Synthetic analytic optimization benchmark only. A PASS is a local protocol gate, not proof of novelty, external validity, peer review or clinical/industrial safety.</div></section>
+<footer>REI Scientist / Rootcastle Engineering &amp; Innovation &nbsp; | &nbsp; Versioned, inspectable research artifacts &nbsp; | &nbsp; 2026-11-08T02:22:51.204182+00:00</footer>
+</main>
+</body></html>

@@ -1,0 +1,12 @@
+{"event":"study_validated","seq":1,"study_id":"sphere-optimizer-pilot"}
+{"dev_mean":0.3608298830660388,"event":"development_evaluated","method":"random_search","proposal_key":"a645f856077e","seq":2}
+{"dev_mean":0.05498895309428371,"event":"development_evaluated","method":"hill_climb","proposal_key":"096c212c3284","seq":3}
+{"dev_mean":0.03432845993238444,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"d4f2cba8318f","seq":4}
+{"dev_mean":0.017740498910576094,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"a5c721bf41ea","seq":5}
+{"dev_mean":0.006690837589932276,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"3b5a5fb37b60","seq":6}
+{"dev_mean":0.03678617490177702,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"06a04ec960c9","seq":7}
+{"dev_mean":0.008444486983618871,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"9b6f524982dd","seq":8}
+{"dev_mean":0.005061380680159618,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"f76646ac22b7","seq":9}
+{"dev_mean":0.008804569072119177,"event":"development_evaluated","method":"simulated_annealing","proposal_key":"49ff3f3c4c68","seq":10}
+{"event":"candidate_selected","proposal_key":"f76646ac22b7","seq":11}
+{"event":"holdout_evaluated","seq":12,"verdict":"PASS"}

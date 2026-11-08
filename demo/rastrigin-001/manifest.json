@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-08T02:22:51.204182+00:00",
+  "dashboard_sha256": "1ac8012d58936eab51b7bcea85e38b120731988e29f49f7a810b1a34df294ee5",
+  "data_provenance": "Analytic, deterministic synthetic benchmarks; no customer data",
+  "events_sha256": "1b316fe03524298b138e0fc337e6507bf71a5cb6f64634c3cba43b812add3a21",
+  "experimental_evaluations": 7740,
+  "external_literature_metadata_only": false,
+  "llm_generated_proposals": false,
+  "name": "REI Scientist",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python_version": "3.13.5",
+  "report_sha256": "11a2491726b2f2cd24c7fa3aaa88f3bcdd9b79fd48282ccf6f545a714b0a605c",
+  "results_sha256": "86739b69f9177294c56f4980927a1505a52b17d630a6d9784c3bb9eaacb19388",
+  "source_sha256": "5dcb1362e3174e3eba0bb6cab3c9d700d669c03efa6caf08fde8fcfc538d43da",
+  "study_id": "rastrigin-global-search-pilot",
+  "study_sha256": "0ab4bf6e43757d08345c3dcd9f7a2b91ce88cc7cfc1f8976c41e5d3702ca5453",
+  "version": "0.1.0"
+}

@@ -1,0 +1,34 @@
+{
+  "benchmark": "sphere",
+  "bounds": [
+    -5.0,
+    5.0
+  ],
+  "candidate_budget": 8,
+  "dev_seeds": [
+    11,
+    23,
+    37
+  ],
+  "dimension": 2,
+  "evaluation_budget": 120,
+  "hypothesis": "Under equal function evaluation budgets and unseen holdout seeds, best-first-tuned local search yields at least 5 percent lower mean final objective than random search.",
+  "max_depth": 2,
+  "methods": [
+    "random_search",
+    "hill_climb",
+    "simulated_annealing"
+  ],
+  "minimum_improvement_pct": 5.0,
+  "question": "On a bounded two-dimensional Sphere benchmark, can an adaptive local search configuration reduce final objective value compared with random sampling?",
+  "schema_version": "1.0",
+  "source_note": "Analytic objective; no empirical sensor data; independent reproducibility study",
+  "study_id": "sphere-optimizer-pilot",
+  "test_seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-08T02:22:49.426190+00:00",
+  "dashboard_sha256": "f6b65f74029eec7b2b5fb24a7c57cc3cc13e42f3526e2d6a2e38e4992023b945",
+  "data_provenance": "Analytic, deterministic synthetic benchmarks; no customer data",
+  "events_sha256": "f2275b8a8bd63dbe363930d37b4826569ec3ea2713855ca2de8c36edc2ad5269",
+  "experimental_evaluations": 4440,
+  "external_literature_metadata_only": false,
+  "llm_generated_proposals": false,
+  "name": "REI Scientist",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python_version": "3.13.5",
+  "report_sha256": "915d839f3246e06040b87db5b6635d4fcf8e70bc0495ec029c4fa4ef499156c4",
+  "results_sha256": "09f74ee38ac8870b5b2a2118111a31dd96a17914d2d2edc61b61e8be8fcb3289",
+  "source_sha256": "5dcb1362e3174e3eba0bb6cab3c9d700d669c03efa6caf08fde8fcfc538d43da",
+  "study_id": "sphere-optimizer-pilot",
+  "study_sha256": "20df0ab27eb531a60095a7f9618b3c23837dbdbb4fc1c813e573d7324c633792",
+  "version": "0.1.0"
+}

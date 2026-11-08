@@ -1,0 +1,34 @@
+{
+  "benchmark": "rastrigin",
+  "bounds": [
+    -5.12,
+    5.12
+  ],
+  "candidate_budget": 10,
+  "dev_seeds": [
+    11,
+    23,
+    37
+  ],
+  "dimension": 2,
+  "evaluation_budget": 180,
+  "hypothesis": "On independent holdout seeds, one registered local search method provides at least a 5 percent improvement over uniform random search without crossing the evaluation budget.",
+  "max_depth": 2,
+  "methods": [
+    "random_search",
+    "hill_climb",
+    "simulated_annealing"
+  ],
+  "minimum_improvement_pct": 5.0,
+  "question": "Does simulated annealing yield a lower objective than random search on a multimodal Rastrigin benchmark under an identical evaluation budget?",
+  "schema_version": "1.0",
+  "source_note": "Controlled multimodal synthetic benchmark; external validity not assessed",
+  "study_id": "rastrigin-global-search-pilot",
+  "test_seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ]
+}
