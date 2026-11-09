@@ -231,3 +231,9 @@ For citation and machine-readable project metadata, see [`CITATION.cff`](CITATIO
 <div align="center">
   <small><strong>Rootcastle Engineering & Innovation</strong> &mdash; Design experiments. Preserve evidence. Verify claims.</small>
 </div>
+
+## Rootcastle project guide
+
+[Project overview and practical workflow](https://rootcastle.com/en/projects/rei-scientist/) · [Engineering walkthrough](https://rootcastle.com/en/engineering-notes/reproducible-numerical-optimization/)
+
+The repository remains the reference for current setup, supported features and licensing. The project guide explains the workflow and its verification boundaries.
