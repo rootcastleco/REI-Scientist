@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>REI Scientist / Ar-Ge Çalışma Merkezi</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" aria-label="Çalışma kayıtları">
+    <div class="brand"><span class="brand-mark">R<span>E</span>I</span><span class="brand-text">ROOTCASTLE<br><small>ENGINEERING &amp; INNOVATION</small></span></div>
+    <div class="side-title">BİLİMSEL AR-GE ÇALIŞMA MERKEZİ</div>
+    <button id="newBtn" class="button primary full">+ Yeni çalışma</button>
+    <div class="side-group"><label for="search">Kayıt ara</label><input id="search" type="search" placeholder="Başlık, konu veya kaynak"></div>
+    <div class="side-group"><label for="filterProject">Proje</label><select id="filterProject"><option value="">Tüm projeler</option></select></div>
+    <div class="side-group"><label for="filterStatus">Kayıt durumu</label><select id="filterStatus"><option value="">Tüm durumlar</option><option>DRAFT</option><option>ACTIVE</option><option>ARCHIVED</option></select></div>
+    <div class="side-meta"><span>ÇALIŞMALAR</span><span id="recordCount">0</span></div>
+    <div id="recordList" class="record-list" aria-live="polite"></div>
+    <div class="side-footer">LOCAL-FIRST · REVISIONED<br>Scientific evidence / NOT VERIFIED by default</div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><span>REI Scientist <span class="breadcrumb">/ Research Workspace</span></span><span id="connection" class="connection">Yerel bağlantı</span></header>
+    <div class="content">
+      <div class="heading"><div><p class="eyebrow">ÇALIŞMA KAYDI / STUDY RECORD</p><h1 id="pageTitle">Ar-Ge çalışma merkezi</h1><p id="pageSubtitle" class="lead">Kanıta dayalı araştırma, boyutsal doğrulama ve izlenebilir deney kayıtları.</p></div><div class="heading-actions"><span id="revisionLabel" class="muted">Kayıt seçilmedi</span><button id="saveBtn" class="button primary" disabled>Kaydet</button></div></div>
+      <div id="notice" class="notice" hidden role="status"></div>
+      <section id="welcome" class="welcome">
+        <div class="welcome-heading"><p class="eyebrow">BAŞLANGIÇ</p><h2>Mevcut araştırma motoruyla uyumlu çalışma alanı</h2><p>Bir proje şablonundan başla veya soldan kayıt seç. Şablonlar yalnızca hipotez ve değişken yapısı sağlar; ölçülmüş sonuç içermez.</p></div>
+        <div id="templateGrid" class="templates"></div>
+        <p class="fineprint">Birim ve şema kontrolleri hesaplamanın fiziksel doğruluğunu tek başına kanıtlamaz. Cihaz müdahalesi ve otonom saha deneyi bu çalışma alanında etkin değildir.</p>
+      </section>
+      <section id="editor" hidden>
+        <div class="status-strip"><span id="statusPill" class="pill">DRAFT</span><span id="verifyPill" class="pill neutral">NOT VERIFIED</span><span class="strip-desc">Baseline ve aday yöntemler ayrı kaydedilir · Her kaydetme yeni revision oluşturur</span></div>
+        <nav class="tabs" aria-label="Çalışma bölümleri">
+          <button data-tab="protocol" class="tab active">01 · Protokol</button>
+          <button data-tab="model" class="tab">02 · Model &amp; yöntem</button>
+          <button data-tab="plan" class="tab">03 · Deney planı</button>
+          <button data-tab="results" class="tab">04 · Sonuçlar</button>
+          <button data-tab="history" class="tab">05 · Sürümler</button>
+        </nav>
+        <div id="tabProtocol" class="tab-panel">
+          <div class="panel"><h2>Araştırma kapsamı <span>Research protocol</span></h2><div class="form-grid"><div class="field wide"><label for="title">Çalışma başlığı</label><input id="title" data-field="title" maxlength="2000"></div><div class="field"><label for="project">Proje</label><select id="project" data-field="project"></select></div><div class="field"><label for="status">Kayıt durumu</label><select id="status" data-field="status"><option>DRAFT</option><option>ACTIVE</option><option>ARCHIVED</option></select></div><div class="field wide"><label for="research_question">Araştırma sorusu</label><textarea rows="3" id="research_question" data-field="research_question"></textarea></div></div></div>
+          <div class="two-col"><div class="panel"><h2>Mühendislik gereksinimleri <span>Requirements</span></h2><p class="hint">Her gereksinimde id, description ve verification (PASS / FAIL / NOT VERIFIED).</p><textarea class="codearea" data-json="requirements" rows="9" spellcheck="false"></textarea></div><div class="panel"><h2>Değişkenler <span>Variables &amp; units</span></h2><p class="hint">symbol, unit, role, lower, upper. Desteklenmeyen birim açık hatadır.</p><textarea class="codearea" data-json="variables" rows="9" spellcheck="false"></textarea></div></div>
+          <div class="two-col"><div class="panel"><h2>Kısıtlar <span>Constraints</span></h2><p class="hint">expression, kind: hard / soft, verification. Serbest ifadeler otomatik matematiksel ispat sayılmaz.</p><textarea class="codearea" data-json="constraints" rows="7" spellcheck="false"></textarea></div><div class="panel"><h2>Veri setleri <span>Datasets</span></h2><p class="hint">name, sha256, source, verification. Hash verilmediyse provenance NOT VERIFIED.</p><textarea class="codearea" data-json="datasets" rows="7" spellcheck="false"></textarea></div></div>
+          <div class="panel"><h2>Kaynaklar <span>Sources &amp; evidence</span></h2><p class="hint">title ve HTTPS url ile izlenebilir kaynaklar.</p><textarea class="codearea" data-json="sources" rows="5" spellcheck="false"></textarea></div>
+        </div>
+        <div id="tabModel" class="tab-panel" hidden>
+          <div class="panel"><h2>Hesaplama protokolü <span>Reproducibility contract</span></h2><div class="form-grid"><div class="field"><label>Study version</label><input data-field="version"></div><div class="field"><label>Seed</label><input data-number="seed" type="number" step="1"></div><div class="field"><label>Numerical tolerance</label><input data-number="tolerance" type="number" step="any"></div><div class="field"><label>Verification gate</label><select data-field="verification_status"><option>NOT VERIFIED</option><option>PASS</option><option>FAIL</option></select></div><div class="field wide"><label>Stopping criterion</label><textarea data-field="stop_criterion" rows="2"></textarea></div></div></div>
+          <div class="two-col"><div class="panel"><h2>Hesaplama bütçesi <span>Compute budget</span></h2><p class="hint">evaluation count, CPU seconds, memory MB; bütçe limitleri çalışma öncesi beyan edilir.</p><textarea class="codearea" data-json="compute_budget" rows="6" spellcheck="false"></textarea></div><div class="panel"><h2>Baseline</h2><div class="field"><label>Yöntem</label><input data-nested="baseline.method"></div><div class="field"><label>Notlar ve sınırlar</label><textarea data-nested="baseline.notes" rows="3"></textarea></div></div></div>
+          <div class="two-col"><div class="panel"><h2>Aday yöntemler <span>Candidate methods</span></h2><textarea class="codearea" data-json="candidate_methods" rows="7" spellcheck="false"></textarea></div><div class="panel"><h2>Hipotezler <span>Hypotheses</span></h2><p class="hint">statement ve test alanları gerekir.</p><textarea class="codearea" data-json="hypotheses" rows="7" spellcheck="false"></textarea></div></div>
+          <div class="panel"><h2>Normalize amaç fonksiyonu <span>Dimensionally consistent objective</span></h2><div class="form-grid"><div class="field"><label>Optimization direction</label><select data-nested="objective.sense"><option value="min">min</option><option value="max">max</option></select></div></div><p class="hint">Her terim: variable, weight, scale, scale_unit. Sadece eş boyutlu oranlardan boyutsuz kare toplamı üretilir.</p><textarea class="codearea" data-json="objective.terms" rows="7" spellcheck="false"></textarea><div id="formula" class="formula">—</div><p class="fineprint">Birimsel uygunluk ≠ uygulanabilirlik, fizibilite veya model doğruluğu.</p></div>
+          <div class="two-col"><div class="panel"><h2>Belirsizlikler <span>Uncertainties</span></h2><textarea class="codearea" data-json="uncertainties" rows="7" spellcheck="false"></textarea></div><div class="panel"><h2>Açık doğrulama işleri <span>NOT VERIFIED</span></h2><textarea class="codearea" data-json="not_verified" rows="7" spellcheck="false"></textarea></div></div>
+        </div>
+        <div id="tabPlan" class="tab-panel" hidden>
+          <div class="panel"><div class="panel-head"><div><h2>Yapılandırılmış deney planı <span>Experiment plan</span></h2><p class="hint">Girdilerden oluşturulan izlenebilir plan. Kayıtlı en son revision üzerinden üretilir.</p></div><button id="exportPlan" class="button">Markdown dışa aktar</button></div><pre id="planText" class="output">Plan için önce kaydet.</pre></div>
+          <div class="panel"><h2>Tekrarlanabilirlik kontrolü</h2><div class="checks"><p>01 · Seed, tolerans, bütçe ve stopping criterion kayıtlı</p><p>02 · Dataset hash / source provenance denetlenmeli</p><p>03 · Baseline ve candidate aynı test koşullarında karşılaştırılmalı</p><p>04 · Independent replay / residual oracle henüz otomatik çalıştırılmıyor</p><p>05 · Saha ve güvenlik doğrulaması ayrıca gereklidir</p></div></div>
+        </div>
+        <div id="tabResults" class="tab-panel" hidden>
+          <div class="panel"><h2>Deney sonuçları <span>Results &amp; residuals</span></h2><p class="hint">JSON satırları: variable, baseline, candidate, verification. Eksik ölçüm null bırakılır; sahte sonuç üretilmez.</p><textarea class="codearea" data-json="results" rows="8" spellcheck="false"></textarea><div class="table-scroll"><table><thead><tr><th>Variable</th><th>Unit</th><th>Baseline</th><th>Candidate</th><th>Residual</th><th>Evidence</th></tr></thead><tbody id="resultsBody"></tbody></table></div></div>
+          <div class="panel"><div class="panel-head"><div><h2>Bilimsel grafik akışı <span>Scientific figure</span></h2><p class="hint">Sadece kaydedilmiş ölçümler. Her metrik bağımsız, sıfır merkezli eksende; SVG vektör dışa aktarma.</p></div><div class="inline-actions"><button id="exportCsv" class="button">CSV</button><button id="exportSvg" class="button">SVG</button></div></div><div id="figureWrap" class="figure-wrap">Grafik için çalışma ve ölçüm kaydet.</div><p class="fineprint">Yayın için: bağımsız doğrulama ve Matplotlib (PNG ≥300 DPI + SVG) çıktı kontrolü gerekir.</p></div>
+        </div>
+        <div id="tabHistory" class="tab-panel" hidden><div class="panel"><h2>Sürüm geçmişi <span>Append-only revisions</span></h2><p class="hint">Her kayıt değişikliği yeni revision üretir. Geri yükleme, eski kaydı silmeden yeni revision açar.</p><div id="historyList" class="history-list"></div></div></div>
+        <div class="bottom-actions"><button id="exportJson" class="button">JSON kayıt dışa aktar</button><span class="hint">Tüm içerik yerel SQLite veritabanında tutulur. Haricî servise veri gönderilmez.</span></div>
+      </section>
+    </div>
+  </main>
+</div>
+</body>
+</html>

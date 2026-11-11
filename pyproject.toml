@@ -13,8 +13,16 @@ license = {text = "MIT"}
 keywords = ["scientific-discovery", "reproducibility", "optimization", "agentic-research"]
 classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
 
+[project.optional-dependencies]
+figures = ["matplotlib>=3.8"]
+
 [project.scripts]
 rei-scientist = "rei_scientist.cli:main"
+rei-scientist-workspace = "rei_scientist.workspace_app:main"
+rei-scientist-figure = "rei_scientist.workspace_figure:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+rei_scientist = ["workspace.html", "workspace.css", "workspace.js"]
